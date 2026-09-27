@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f2">
+  <meta name="description" content="Jaden's Environment — a better place to shop, eat, and spend time together. Opening March 11, 2041.">
+  <title>Jaden’s Environment — A world of good, growing together</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#17332e;--muted:#66776e;--green:#28684e;--lime:#d9f17e;--paper:#f5f7f2;--line:#dce4da;--white:#fff;--shadow:0 20px 60px #1d392211}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+    .topline{height:39px;background:var(--ink);color:#eaf4dc;font-size:12px;letter-spacing:.08em;display:flex;align-items:center;justify-content:center}.topline span{color:var(--lime);margin-right:8px}
+    header{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;font-family:Manrope,sans-serif;font-size:17px;font-weight:800;letter-spacing:-.04em}.brand img{width:53px;height:53px;object-fit:cover;border-radius:50%;border:2px solid white;box-shadow:0 2px 12px #17332e24}.nav{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:600}.nav a,.mobile-links a{transition:opacity .2s}.nav a.locked,.mobile-links a.locked{opacity:.42;cursor:not-allowed;pointer-events:none}.nav .nav-cta{padding:12px 17px;border-radius:30px;background:var(--ink);color:white}
+    .hero{position:relative;overflow:hidden;padding:79px 0 69px;background:radial-gradient(ellipse at 82% 42%,#e7f2d6 0,transparent 37%),var(--paper)}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:65px}.eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700;color:var(--green)}.eyebrow:before{content:'';width:25px;height:1px;background:var(--green)}h1,h2,h3,p{margin-top:0}h1{font-family:Manrope,sans-serif;font-size:clamp(48px,6.3vw,78px);line-height:1.02;letter-spacing:-.075em;margin:24px 0 23px;font-weight:600;max-width:630px}h1 em{font-style:normal;color:var(--green)}.intro{font-size:16px;line-height:1.75;color:var(--muted);max-width:465px;margin-bottom:29px}.launch-line{display:flex;align-items:center;gap:11px;color:var(--ink);font-size:13px;font-weight:700;margin-bottom:22px}.launch-line i{width:8px;height:8px;border-radius:50%;background:#86b84f;box-shadow:0 0 0 5px #86b84f22}.launch-line small{font-size:12px;font-weight:500;color:var(--muted)}
+    .countdown{display:flex;align-items:stretch;gap:8px;margin-bottom:28px}.unit{min-width:70px;padding:11px 13px 10px;border:1px solid var(--line);background:#ffffff9c;border-radius:13px;text-align:center}.unit strong{font-family:Manrope,sans-serif;font-size:24px;line-height:1;font-weight:700;display:block;font-variant-numeric:tabular-nums;letter-spacing:-.04em}.unit span{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-top:7px}.colon{display:none}.hero-actions{display:flex;align-items:center;gap:17px}.primary{display:inline-flex;align-items:center;gap:10px;border-radius:30px;padding:14px 20px;background:var(--green);color:white;font-size:13px;font-weight:700;box-shadow:0 8px 20px #28684e27;transition:transform .2s,background .2s}.primary:hover{transform:translateY(-2px);background:#1e573e}.primary svg{width:14px}.open-note{font-size:12px;color:var(--muted)}
+    .visual{height:445px;position:relative;display:grid;place-items:center}.orb{position:absolute;width:355px;height:355px;border-radius:50%;background:linear-gradient(135deg,#d9f17e,#a5d775);right:29px;top:24px;box-shadow:inset -20px -25px 50px #52895020}.visual img{position:absolute;width:min(83%,410px);height:auto;max-height:340px;object-fit:cover;border-radius:22px;box-shadow:0 26px 65px #17332e27;transform:rotate(-3deg);z-index:1;border:8px solid white}.badge{position:absolute;z-index:2;left:4px;bottom:44px;width:107px;height:107px;border-radius:50%;background:var(--ink);color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:10px;letter-spacing:.1em;text-transform:uppercase;line-height:1.4;box-shadow:var(--shadow);transform:rotate(-10deg)}.badge b{color:var(--lime);font-family:Manrope,sans-serif;font-size:21px;letter-spacing:-.05em}.leaf{position:absolute;right:7px;bottom:11px;color:#4b795a;opacity:.22;font-size:94px;transform:rotate(35deg)}
+    .ticker{background:var(--lime);padding:17px 0;overflow:hidden;white-space:nowrap;color:var(--ink);font-family:Manrope,sans-serif;font-size:11px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}.ticker-inner{display:flex;justify-content:space-around;gap:25px}.ticker b{font-size:15px;color:var(--green)}
+    .explore{padding:93px 0 100px;background:#fff}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:34px}.section-head h2{font:600 clamp(32px,4vw,47px)/1.05 Manrope,sans-serif;letter-spacing:-.065em;margin:13px 0 0}.section-head p{color:var(--muted);font-size:13px;line-height:1.7;max-width:285px;margin:0 4px 4px 20px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{position:relative;min-height:222px;padding:25px 25px 23px;border:1px solid var(--line);border-radius:18px;background:#fbfcf9;transition:transform .2s,box-shadow .2s,border-color .2s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#b7c9b8}.card .icon{width:41px;height:41px;border-radius:13px;background:#eaf2df;display:grid;place-items:center;color:var(--green);margin-bottom:23px}.icon svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.card h3{font:700 19px Manrope,sans-serif;letter-spacing:-.04em;margin-bottom:8px}.card p{font-size:12px;line-height:1.6;color:var(--muted);max-width:255px;margin:0}.card .arrow{position:absolute;right:23px;top:24px;font-size:19px;color:var(--green)}.card.locked{opacity:.68;cursor:not-allowed}.card.locked:hover{transform:none;box-shadow:none;border-color:var(--line)}.coming-tag{position:absolute;right:20px;bottom:20px;font-size:9px;color:#6e7c71;text-transform:uppercase;letter-spacing:.11em;font-weight:700}.card.unlocked{cursor:pointer}
+    .promise{padding:77px 0;background:#edf3e8}.promise-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}.promise h2{font:600 41px/1.08 Manrope,sans-serif;letter-spacing:-.065em;margin:15px 0}.promise p{color:var(--muted);font-size:14px;line-height:1.75;margin:0;max-width:380px}.promise-points{display:grid;grid-template-columns:1fr 1fr;gap:12px}.point{padding:20px;border-radius:14px;background:#fff}.point b{display:block;font:700 14px Manrope,sans-serif;margin:9px 0 5px}.point span{font-size:11px;line-height:1.6;color:var(--muted)}.point .icon{width:31px;height:31px;border-radius:10px;background:#eaf2df;display:grid;place-items:center;color:var(--green)}.point svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8}
+    footer{padding:30px 0;background:var(--ink);color:#e7eee2;font-size:11px}.footer-row{display:flex;align-items:center;justify-content:space-between}.footer-brand{display:flex;align-items:center;gap:9px;font:700 13px Manrope,sans-serif}.footer-brand img{width:29px;height:29px;object-fit:cover;border-radius:50%}.footer-meta{color:#aebcaf}.mobile-links{display:none}
+    @media(max-width:850px){.nav{gap:16px}.nav a{font-size:12px}.hero-grid{gap:25px}.visual{height:380px}.orb{width:295px;height:295px}.visual img{width:84%}.unit{min-width:61px;padding:10px 8px}.unit strong{font-size:21px}.countdown{gap:5px}}
+    @media(max-width:680px){.wrap{width:min(100% - 36px,500px)}.topline{font-size:10px}.topline .desktop{display:none}header{height:72px}.brand{font-size:15px}.brand img{width:45px;height:45px}.nav{display:none}.hero{padding:52px 0 44px}.hero-grid{grid-template-columns:1fr;gap:8px}.hero-copy{position:relative;z-index:2}h1{font-size:56px;margin:19px 0}.intro{font-size:14px}.visual{height:295px;grid-row:1;margin-bottom:1px}.orb{width:245px;height:245px;right:calc(50% - 156px);top:10px}.visual img{width:72%;max-height:250px}.badge{left:8px;bottom:8px;width:78px;height:78px;font-size:8px}.badge b{font-size:17px}.leaf{font-size:68px}.countdown{gap:5px}.unit{flex:1;min-width:0;padding:10px 4px 9px}.unit strong{font-size:20px}.unit span{font-size:8px}.hero-actions{flex-wrap:wrap}.ticker-inner{justify-content:flex-start;gap:25px;min-width:max-content;animation:scroll 27s linear infinite}.ticker{padding:14px 0}.explore{padding:67px 0}.section-head{display:block}.section-head p{margin:15px 0 0}.cards{grid-template-columns:1fr 1fr;gap:10px}.card{min-height:204px;padding:18px 16px}.card h3{font-size:16px}.card p{font-size:11px}.card .arrow{right:15px;top:15px}.coming-tag{right:13px;bottom:13px;font-size:8px}.promise{padding:57px 0}.promise-grid{grid-template-columns:1fr;gap:27px}.promise h2{font-size:35px}.footer-row{gap:14px;align-items:flex-start;flex-direction:column}.footer-meta{line-height:1.7}}
+    @keyframes scroll{to{transform:translateX(-22%)}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+    .contact{padding:80px 0;background:#fff}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}.contact h2{font:600 42px/1.05 Manrope,sans-serif;letter-spacing:-.065em;margin:14px 0}.contact-intro{font-size:13px;line-height:1.7;color:var(--muted);max-width:310px}.contact-address{font-weight:700;color:var(--green);font-size:13px}.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.contact-form label{display:grid;gap:7px;font-size:11px;color:var(--muted);font-weight:700}.contact-form label.full{grid-column:1/-1}.contact-form input,.contact-form textarea{width:100%;border:1px solid var(--line);border-radius:10px;background:#fbfcf9;padding:13px 14px;font:13px 'DM Sans',sans-serif;color:var(--ink);outline:none}.contact-form input:focus,.contact-form textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px #28684e16}.contact-form textarea{min-height:120px;resize:vertical}.contact-form button{justify-self:start;border:0;cursor:pointer}.contact-form fieldset{border:0;padding:0;margin:0;display:contents}.contact-hint{grid-column:1/-1;font-size:11px;color:var(--muted);margin:0}
+    @media(max-width:680px){.contact{padding:57px 0}.contact-grid{grid-template-columns:1fr;gap:22px}.contact h2{font-size:35px}.contact-form{grid-template-columns:1fr}.contact-form label.full,.contact-hint{grid-column:auto}}
+    .contact-button{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--green);border-radius:30px;padding:13px 17px;color:var(--green);font-size:13px;font-weight:700;background:#ffffff9c}.contact-button:hover{background:#eaf2df}
+  </style>
+</head>
+<body>
+  <div class="topline"><span>✳</span> OPEN 24/7 <span class="desktop">· YOUR NEW FAVORITE PLACE IS GROWING</span></div>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#home" aria-label="Jaden's Environment home"><img src="assets/jadens-environment-logo.jpg" alt="Jaden’s Environment logo">JADEN’S ENVIRONMENT</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="" href="#products" >Products</a><a class="" href="#stores" >Stores</a><a class="" href="#family" >Family</a><a class="" href="#dining" >Dining</a><a class="" href="#news" >News &amp; events</a><a class="nav-cta" href="#contact" >Contact us <span>↗</span></a>
+      </nav>
+    </header>
+  </div>
+  <main id="home">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">A little more room to grow</div>
+          <h1>A world of good,<br><em>growing together.</em></h1>
+          <p class="intro">A fresh kind of place for the things that make life feel good. Thoughtful finds, good food, and more ways to spend time together.</p>
+          <div class="launch-line"><i></i><span>We’re open <small>· 24/7</small></span></div>
+          <div class="countdown" aria-label="Time until launch">
+            <div class="unit"><strong id="years">0</strong><span>Years</span></div><div class="unit"><strong id="months">0</strong><span>Months</span></div><div class="unit"><strong id="weeks">0</strong><span>Weeks</span></div><div class="unit"><strong id="days">0</strong><span>Days</span></div><div class="unit"><strong id="hours">0</strong><span>Hours</span></div><div class="unit"><strong id="minutes">0</strong><span>Minutes</span></div><div class="unit"><strong id="seconds">0</strong><span>Seconds</span></div>
+          </div>
+          <div class="hero-actions"><a class="primary" href="#explore" >Explore the environment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a><a class="contact-button" href="#contact">Contact us <span aria-hidden="true">↗</span></a><span class="open-note">Always open. Ready when you are.</span></div>
+        </div>
+        <div class="visual" aria-label="Jaden's Environment emblem"><div class="orb"></div><img src="assets/jadens-environment-logo.jpg" alt="Jaden’s Environment gear and leaf emblem"><div class="badge"><b>24/7</b>always<br>growing</div><div class="leaf" aria-hidden="true">✳</div></div>
+      </div>
+    </section>
+    <div class="ticker" aria-hidden="true"><div class="ticker-inner"><span>Made for everyday life</span><b>✳</b><span>Good things grow here</span><b>✳</b><span>Room for everyone</span><b>✳</b><span>Open around the clock</span><b>✳</b><span>Made for everyday life</span><b>✳</b><span>Good things grow here</span></div></div>
+    <section class="explore" id="explore">
+      <div class="wrap"><div class="section-head"><div><div class="eyebrow">Find your kind of good</div><h2>There’s something here<br>for everyone.</h2></div><p>Take a look around. These doors open together on launch day.</p></div>
+        <div class="cards">
+          <a class="card" id="products" href="#products" ><span class="arrow">↗</span><div class="icon"><svg viewBox="0 0 24 24"><path d="M5 8h14l1 12H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg></div><h3>Products</h3><p>Everyday essentials and little discoveries, picked with care.</p></a>
+          <a class="card" id="stores" href="#stores" ><span class="arrow">↗</span><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 10h18l-2-6H5l-2 6Z"/><path d="M5 10v10h14V10M9 20v-6h6v6M3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/></svg></div><h3>Stores</h3><p>Find your neighborhood spot and see what’s happening nearby.</p></a>
+          <a class="card" id="family" href="#family" ><span class="arrow">↗</span><div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M16 5.5a3 3 0 0 1 0 5.8M18 14a5 5 0 0 1 3 4.6V20"/></svg></div><h3>Family</h3><p>Ideas, activities, and useful things for every generation.</p></a>
+          <a class="card" id="dining" href="#dining" ><span class="arrow">↗</span><div class="icon"><svg viewBox="0 0 24 24"><path d="M7 3v7M4 3v4a3 3 0 0 0 6 0V3M7 10v11M16 3v18M16 3c3 2 4 5 4 8h-4"/></svg></div><h3>Dining</h3><p>Good meals, quick bites, and tables worth lingering around.</p></a>
+          <a class="card" id="news" href="#news" ><span class="arrow">↗</span><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/></svg></div><h3>News &amp; events</h3><p>Stories from our community and things to look forward to.</p></a>
+          <a class="card" href="#about" ><span class="arrow">↗</span><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 21s8-4 8-11V5l-8-3-8 3v5c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Our environment</h3><p>A little about what we care about and what we’re growing.</p></a>
+        </div>
+      </div>
+    </section>
+    <section class="promise" id="about"><div class="wrap promise-grid"><div><div class="eyebrow">A place that feels like yours</div><h2>Good for your day.<br>Good for what’s next.</h2><p>We’re getting everything ready: a welcoming place built around everyday moments, thoughtful choices, and the people who make a community.</p></div><div class="promise-points"><div class="point"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 21s8-4 8-11V5l-8-3-8 3v5c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg></div><b>Thoughtful by nature</b><span>Care in the details, from the first visit onward.</span></div><div class="point"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><b>Here whenever</b><span>Open 24/7, so good things fit your schedule.</span></div></div></div></section>
+    <section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">We’d love to hear from you</div><h2>Contact us.</h2><p class="contact-intro">Send a note to the Jaden’s Environment team. We’ll be happy to hear what’s on your mind.</p><p class="contact-address">eng.jadeneng@gmail.com</p></div><form class="contact-form" data-contact-form><fieldset><label>Your email<input name="from" type="email" placeholder="you@example.com" required></label><label>Subject<input name="subject" type="text" placeholder="What’s this about?" required></label><label class="full">Message<textarea name="message" placeholder="Write your message…" required></textarea></label><button class="primary" type="submit">Write an email <span aria-hidden="true">↗</span></button></fieldset><p class="contact-hint">This opens a ready-to-send email in your email app.</p></form></div></section>
+  </main>
+  <footer><div class="wrap footer-row"><a class="footer-brand" href="#home"><img src="assets/jadens-environment-logo.jpg" alt="">JADEN’S ENVIRONMENT</a><div class="footer-meta">Opening March 11, 2041 at 10:50 AM · Open 24/7<br>© <span id="year-now">2026</span> Jaden’s Environment</div></div></footer>
+  <script>
+    (()=>{
+      // Launch time uses the visitor's local time zone: March 11, 2041 at 10:50 AM.
+      const launch = new Date(2041, 2, 11, 10, 50, 0, 0);
+      const fields=['years','months','weeks','days','hours','minutes','seconds'];
+      const nodes=Object.fromEntries(fields.map(id=>[id,document.getElementById(id)]));
+      const interactive=[...document.querySelectorAll('.locked')];
+      document.getElementById('year-now').textContent=new Date().getFullYear();
+      let unlocked=false;
+      const pad=n=>String(n).padStart(2,'0');
+      function calendarParts(now){
+        let years=launch.getFullYear()-now.getFullYear();
+        let anchor=new Date(now); anchor.setFullYear(anchor.getFullYear()+years);
+        if(anchor>launch){years--;anchor=new Date(now);anchor.setFullYear(anchor.getFullYear()+years)}
+        let months=(launch.getFullYear()-anchor.getFullYear())*12+launch.getMonth()-anchor.getMonth();
+        let monthAnchor=new Date(anchor);monthAnchor.setMonth(monthAnchor.getMonth()+months);
+        if(monthAnchor>launch){months--;monthAnchor=new Date(anchor);monthAnchor.setMonth(monthAnchor.getMonth()+months)}
+        let seconds=Math.max(0,Math.floor((launch-monthAnchor)/1000));
+        const weeks=Math.floor(seconds/604800);seconds-=weeks*604800;
+        const days=Math.floor(seconds/86400);seconds-=days*86400;
+        const hours=Math.floor(seconds/3600);seconds-=hours*3600;
+        const minutes=Math.floor(seconds/60);seconds-=minutes*60;
+        return {years,months,weeks,days,hours,minutes,seconds};
+      }
+      function setUnlocked(){
+        if(unlocked)return;unlocked=true;
+        interactive.forEach(el=>{el.classList.remove('locked');el.classList.add('unlocked');el.removeAttribute('aria-disabled');if(el.matches('.card'))el.querySelector('.coming-tag')?.remove()});
+        document.querySelectorAll('[data-contact-form] fieldset').forEach(el=>el.disabled=false);
+        document.querySelectorAll('.contact-hint').forEach(el=>el.textContent='This opens a ready-to-send email in your email app.');
+        document.querySelector('.launch-line span').innerHTML='We’re open <small>· 24/7</small>';
+        document.querySelector('.hero-actions .primary').innerHTML='Explore the environment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>';
+        document.querySelector('.section-head p').textContent='The doors are open. Find your kind of good.';
+        document.title='Jaden’s Environment — We’re open';
+      }
+      function tick(){
+        if(unlocked)return;
+        const now=new Date();
+        if(now>=launch){fields.forEach(id=>nodes[id].textContent='0');setUnlocked();return}
+        const left=calendarParts(now);
+        Object.entries(left).forEach(([id,n])=>nodes[id].textContent=pad(n));
+        setTimeout(tick,250);
+      }
+      interactive.forEach(el=>el.addEventListener('click',e=>{if(!unlocked){e.preventDefault();e.stopPropagation()}}));
+      document.querySelectorAll('[data-contact-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();if(!unlocked)return;const data=new FormData(form);const subject=String(data.get('subject')||'');const from=String(data.get('from')||'');const message=String(data.get('message')||'');const body='From: '+from+'\n\n'+message;location.href='mailto:eng.jadeneng@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body)}));
+      fields.forEach(id=>nodes[id].textContent='0');
+      setUnlocked();
+      tick();
+    })();
+  </script>
+</body>
+</html>
